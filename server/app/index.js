@@ -15,6 +15,6 @@ module.exports = router =>
     init() {
       this.app.set('port', this.port);
       this.config.forEach(config => this.app.use(config));
-      this.app.use('/api', this.router);
+      this.app.use('/', this.router);
     }
   }(router);
