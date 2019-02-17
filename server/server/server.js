@@ -2,7 +2,7 @@ module.exports = class {
   constructor(app) {
     this.server = require('http').createServer(app.self);
     this.app = app;
-    this.debug = require('debug')('server:server');
+    this.debug = require('debug')('root:server');
 
     this.server.listen(this.app.port);
     this.server.on('error', this.onError.bind(this));
