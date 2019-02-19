@@ -1,3 +1,3 @@
 const Server = require('./server');
 
-module.exports = app => new Server(app);
+module.exports = (app = require('../app')()) => new Server(app);

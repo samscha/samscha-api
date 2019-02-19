@@ -1,3 +1,3 @@
 const Router = require('./router');
 
-module.exports = routes => new Router(routes);
+module.exports = (routes = require('../routes')) => new Router(routes);
