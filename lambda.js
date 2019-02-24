@@ -1,7 +1,7 @@
 'use strict';
 // prettier-ignore
 const awsServerlessExpress = require(process.env.NODE_ENV === 'test' ? '../../index' : 'aws-serverless-express')
-const app = require('./aws-app');
+const app = require('./app');
 
 // NOTE: If you get ERR_CONTENT_DECODING_FAILED in your browser, this is likely
 // due to a compressed response (e.g. gzip) which has not been handled correctly
