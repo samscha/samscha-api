@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Serverless Express Application/API powered by API Gateway and Lambda
+Description: root instance
 Resources:
   ApiGatewayApi:
     Type: AWS::Serverless::Api
@@ -9,7 +9,7 @@ Resources:
       StageName: prod
       Variables:
         ServerlessExpressLambdaFunctionName:
-          Ref: AwsServerlessExpressFunction
+          Ref: serverFunc
   LambdaExecutionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -38,7 +38,7 @@ Resources:
       Action: lambda:InvokeFunction
       FunctionName:
         Fn::GetAtt:
-        - AwsServerlessExpressFunction
+        - serverFunc
         - Arn
       Principal: apigateway.amazonaws.com
       SourceArn:
@@ -51,10 +51,10 @@ Resources:
           - ':'
           - Ref: ApiGatewayApi
           - /*/*
-  AwsServerlessExpressFunction:
+  serverFunc:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://ziedath4einoox1i/d8571db7970e8759c492a510d8773ae4
+      CodeUri: s3://ziedath4einoox1i/ecf8a57e42ecd165716d0616363aadd9
       Handler: lambda.handler
       MemorySize: 1024
       Role:
@@ -89,7 +89,7 @@ Outputs:
         - .console.aws.amazon.com/lambda/home?region=
         - Ref: AWS::Region
         - '#/functions/'
-        - Ref: AwsServerlessExpressFunction
+        - Ref: serverFunc
   ApiGatewayApiConsoleUrl:
     Description: Console URL for the API Gateway API's Stage.
     Value:

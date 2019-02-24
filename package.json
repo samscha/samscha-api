@@ -31,8 +31,8 @@
   "config": {
     "s3BucketName": "ziedath4einoox1i",
     "region": "us-east-1",
-    "cloudFormationStackName": "AwsServerlessExpressStack",
-    "functionName": "AwsServerlessExpressFunction",
+    "cloudFormationStackName": "root",
+    "functionName": "serverFunc",
     "accountId": "609215230012"
   },
   "dependencies": {
