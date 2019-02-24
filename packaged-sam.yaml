@@ -54,7 +54,7 @@ Resources:
   serverFunc:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://ziedath4einoox1i/ecf8a57e42ecd165716d0616363aadd9
+      CodeUri: s3://ziedath4einoox1i/3d3c669fd1953018d1fb74295ed314a1
       Handler: lambda.handler
       MemorySize: 1024
       Role:
