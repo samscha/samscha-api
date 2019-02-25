@@ -1,6 +1,7 @@
 'use strict';
-// prettier-ignore
-const awsServerlessExpress = require(process.env.NODE_ENV === 'test' ? '../../index' : 'aws-serverless-express')
+const awsServerlessExpress = require(process.env.NODE_ENV === 'test'
+  ? '../../index'
+  : 'aws-serverless-express');
 const app = require('./app');
 
 // NOTE: If you get ERR_CONTENT_DECODING_FAILED in your browser, this is likely
@@ -27,5 +28,5 @@ const binaryMimeTypes = [
   'text/xml',
 ];
 const server = awsServerlessExpress.createServer(app, null, binaryMimeTypes);
-// prettier-ignore
-exports.handler = (event, context) => awsServerlessExpress.proxy(server, event, context)
+exports.handler = (event, context) =>
+  awsServerlessExpress.proxy(server, event, context);
