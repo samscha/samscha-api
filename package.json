@@ -2,5 +2,6 @@
   "name": "root",
   "version": "1.0.0",
   "description": "root",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
