@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "description": "About me!",
+  "description": "client",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -31,5 +31,6 @@
   ],
   "engines": {
     "node": "^12"
-  }
+  },
+  "proxy": "http://localhost:7777"
 }
