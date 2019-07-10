@@ -3,10 +3,12 @@ module.exports = class {
     this.router = require('express').Router();
     this.routes = routes;
 
-    this.router.route('/').get((req, res) => {
-      res.json('root');
-    });
     this.routes.forEach(route => this.router.use('/api', route));
+    this.router.route('*').get((req, res) => {
+      res.sendFile(
+        require('path').join(__dirname, '../../client/build', 'index.html'),
+      );
+    });
   }
 
   get self() {
