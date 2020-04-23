@@ -1,7 +1,7 @@
 {
     "name": "samscha-api",
     "version": "1.0.0",
-    "description": "API for Samuel Cha's personal website",
+    "description": "API for personal website for Samuel Cha",
     "repository": "https://github.com/samscha/samscha-api.git",
     "author": "Samuel Cha <sunchipssam@gmail.com>",
     "license": "MIT",

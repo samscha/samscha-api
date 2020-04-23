@@ -2,7 +2,7 @@
 
 # samscha api
 
-API for Samuel Cha's [personal website](https://samscha.com) ([GitHub](https://github.com/samscha/samscha))
+API for [personal website](https://samscha.com) for Samuel Cha ([GitHub](https://github.com/samscha/samscha))
 
 ## `TODO`
 
