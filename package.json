@@ -1,13 +1,10 @@
 {
     "name": "samscha-api",
     "version": "1.0.0",
-    "description": "API of personal website for Samuel Cha",
-    "scripts": {
-        "start": "node -r dotenv/config ./bin/www",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon -r dotenv/config ./bin/www"
-    },
-    "license": "ISC",
+    "description": "API for Samuel Cha's personal website",
+    "repository": "https://github.com/samscha/samscha-api.git",
+    "author": "Samuel Cha <sunchipssam@gmail.com>",
+    "license": "MIT",
     "dependencies": {
         "debug": "^4.1.1",
         "dotenv": "^8.2.0",
@@ -18,5 +15,10 @@
     "devDependencies": {
         "morgan": "^1.10.0",
         "nodemon": "^2.0.3"
+    },
+    "scripts": {
+        "start": "node -r dotenv/config ./bin/www",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon -r dotenv/config ./bin/www"
     }
 }
